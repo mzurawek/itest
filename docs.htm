@@ -1,0 +1,244 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+"http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<link REL="stylesheet" TYPE="text/css" HREF="css/mycss.css">
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-2">
+<title>iTest</title>
+<style type="text/css">
+<!--
+body,td,th {
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 12px;
+	color: #003366;
+}
+body {
+	background-color: #A8C5F1;
+	margin-left: 5px;
+	margin-top: 5px;
+	margin-right: 5px;
+	margin-bottom: 5px;
+}
+a:link {
+	color: #003366;
+	text-decoration: underline;
+}
+a:visited {
+	text-decoration: underline;
+	color: #003366;
+}
+a:hover {
+	text-decoration: none;
+	color: #006AD5;
+}
+a:active {
+	text-decoration: underline;
+	color: #006AD5;
+}
+.style1 {
+	color: #000000;
+	font-weight: bold;
+}
+-->
+</style></head>
+
+<body>
+<table width="97%" align="center" cellpadding="8" cellspacing="0" bgcolor="#D1E1FA" style="border: 0.3mm solid #376BD9">
+  <tr>
+    <td width="100%">
+<!-- page -->
+<center>
+<table width=300 align="center"><tr><td width=100 align=left><img src="lay/logo.gif"></td><td align=left><span class="style1"><font size=5>iTest</font></span><br>
+  wersja: 1.1</td></tr>
+</table>
+</center>
+<p><br>
+    <br>
+    <br>
+    <strong><font size=3>Spis treści</font></strong></p>
+<p>1. <a href="#p1">Wstęp</a></p>
+<p>2. <a href="#p2">Instalacja</a>
+  <!-- end: page -->
+</p>
+<p>3. <a href="#p3">Wygląd przykładowego testu</a></p>
+<p>4. <a href="#p4">Pozostałe właściwości i funkcje systemu</a></p>
+<p>5. <a href="#p5">Licencja</a></p>
+<p>6. <a href="#p6">W razie problemów</a> </p>
+<p>&nbsp;</p>
+<p><a name="p1"></a><strong><font size=3>1. Wstęp</font></strong></p>
+<p align="justify">Skrypt iTest ma za zadanie pomóc nauczycielom w szybkim przeprowadzaniu testów wyboru. Jego zasada działania jest prosta (o czym dokładniej w punkcie 3.) - nauczyciel przygotowywuje na komputerze test, a uczniowie logując się na poszczególnych komputerach wypełniają go, otrzymując jednocześnie wyniki (dostępne również na komputerze nauczyciela).</p>
+<p align="justify">iTest może być również używany (przy dostępie przez plik <strong>index2.php</strong>) do przeprowadzania testów na np. przyjaciołach. Test z wiedzy o tobie, lub np. o tym co się działo na ostatniej imprezie może być niezłą zabawą. </p>
+<p align="justify">Całość skryptu została napisana w PHP, dlatego aby działał, musi być uruchamiany z serwera WWW. Skrypt nie wymaga bazy MySQL.</p>
+<p align="justify">Skrypt zajął I. miejsce w Powiatowym Konkursie Stron WWW.</p>
+<p align="justify">&nbsp;</p>
+<p align="justify"><a name="p2"></a><strong><font size=3>2. Instalacja </font></strong></p>
+<p align="justify">Instalacja skryptu jest bardzo prosta:
+</p>
+<ul>
+  <LI>Rozpakuj plik .zip ze skryptem do jakiegoś tymczasowego katalogu.
+  <LI>Połącz się FTP z serwerem i wgraj tam wszystkie pliki. Serwer musi obsługiwać PHP w wersji 4.x lub 5.x (patrz 'Lista proponowanych serwerów WWW').
+  <LI>Jeżeli wybranym przez Ciebie serwerem steruje system Linux, musisz nadać prawa CHMOD na poziomie <strong>666</strong> wszystkim plikom z katalogu /data/itest/.
+  <LI>To wszystko. Uruchom teraz przeglądarkę internetową i wpisz adres swojej strony ze skryptem. Musisz teraz zalogować się jako administrator. Domyślnie utworzone jest konto administratora o następujących parametrach:<BR>
+    <UL>
+      login: <B>administrator</B><BR>
+      haslo: <B>administrator</B><BR>
+    </UL>
+  <LI>Pomoc w obsłudze skryptu znajdziesz logując się do Panelu administratora, w menu po lewej. </LI>
+  </ul>
+<p><strong>Lista proponowanych serwerów</strong></p>
+<p>
+<ul>
+<li><a href="http://www.hostultra.com" target="_blank">www.hostultra.com</a></li>
+<li><a href="http://www.of.pl/" target="_blank">www.of.pl</a></li>
+<li><a href="http://www.friko.pl/" target="_blank">www.friko.pl</a></li>
+</ul>
+</p>
+<p align="justify"><strong>Instalacja skryptu na serwerze lokalnym</strong></p>
+<p align="justify">Jeżeli komputery w sieci nie mają połączenia z internetem, skrypt możemy wgrać na serwer lokalny. Program, dzięki któremu założymy serwer u siebie, znajdziemy pod adresem <A href="http://www.krasnal.tk" target="_blank">www.krasnal.tk</A>. Wtedy dostęp do skryptu uzyskujemy przez adres http://localhost/. </p>
+<p>&nbsp;</p>
+<p align="justify"><a name="p3"></a><strong><font size=3>3. Wygląd przykładowego testu</font></strong></p>
+<ul>
+<p align="justify">Oczywiście wszystyko najlepiej wyjaśnić na przykładzie.</p>
+</ul>
+<p align="justify">1. Główne okienko aplikacji</p>
+<ul>
+<p align="justify">
+<table align="left" border="0" class=modul style="border: 0.3mm solid #376BD9; margin-right: 25px; margin-bottom: 10px">
+  <tr>
+    <td class=tabcaption>Zrzut 1.1 - Główne okienko aplikacji</td>
+  </tr>
+  <tr>
+    <td><a href="screens/main.jpg"><img src="screens/main_small.jpg" border="0"></a></td>
+  </tr>
+</table>
+Widzimy tutaj wybór metody logowania: <br><br>
+<ul><li>
+  <div align="justify">konto użytkownik - wybierają uczniowie, którzy chcą wypełnić test i posiadają już swoje konto utworzone przez nauczyciela w systemie.</div>
+</li><li>
+  <div align="justify">konto gość - wybierają uczniowie, którzy chcą wypełnić test, a nie posiadają swojego konta w systmie. Do ich identyfikacji używane są imię i nazwisko, które podaje się w odpowiednim polu. Można ustawić, aby dany test mogli obejrzeć tylko uczniowie z utworzonym kontem.</div>
+</li>
+<li>
+  <div align="justify">konto administrator - wybiera nauczyciel, który chce zarządzać systemem (tworzyć testy, podglądać wyniki itd.). W systemie można utworzyć dowolną ilość kont administratora.</div>
+</li>
+</ul>
+<p align="justify">My zalogujemy się na początek jako administrator. W tym celu klikamy w odpowiedni link, powinniśmy zostać przeniesieni do planszy logowania. Domyślne dane konta administratora to: login - <strong>administrator</strong>, hasło - <strong>administrator</strong>. Po pomyślnym logowaniu powinniśmy zostać przeniesieni do panelu administracji skryptem.</p>
+</ul>
+<br>
+<br clear="all">
+<p>2. Panel administracji skryptem</p>
+<ul>
+<p>
+<table border="0" align="right" class=modul style="border: 0.3mm solid #376BD9; margin-left: 15px">
+  <tr>
+    <td class=tabcaption>Zrzut 2.1 - Panel administracji</td>
+  </tr>
+  <tr>
+    <td><a href="screens/admin.jpg"><img src="screens/admin_small.jpg" border="0"></a></td>
+  </tr>
+</table>
+<p align="justify">Panel administracji skryptem pozwala zarządzać całym systemem. Z jego poziomu nauczyciel może tworzyć nowe testy, edytować istniejące, kontrolować wyniki uczniów, tworzyć ich konta, oraz zmieniać konfigurację skryptu (np. dostosować system oceniania skryptu do wewnątrz szkolnego systemu oceniania).</p>
+    <p align="justify">Kontynuując jednak - udamy się teraz do formularza dodawania nowego testu. W tym celu z menu znajdującego się po lewej, z panelu <strong>Testy</strong> wybieramy opcję <strong>Dodaj nowy</strong>. </p>
+<p align="justify">Naszym oczom powinien ukazać się formularz dodwania noowego testu. Uzupełniamy kolejne jego pola wg. opisu (co do opcji Aktywuj system zapobiegajacy ściąganiu - jej opis znajduje się w Pomocy do programu). Dodawanie testu zakańczamy przyciskiem <strong>Dodaj test</strong>. </p>
+<p align="justify"><table align="left" border="0" class=modul style="border: 0.3mm solid #376BD9; margin-right: 25px; margin-bottom: 10px">
+  <tr>
+    <td class=tabcaption>Zrzut 2.2 - Edycja pytań do testu </td>
+  </tr>
+  <tr>
+    <td><a href="screens/questions.jpg"><img src="screens/questions_small.jpg" border="0"></a></td>
+  </tr>
+</table>Powinniśmy zostać przeniesieni do panelu zarządzania testami. Musimy teraz dodać do testu pytania. W tym celu przy nowo utworzonym teście wybieramy <strong>Edytuj pytania</strong>. </p>
+<p align="justify">Na stronie która nam się ukazała, zobaczymy podgląd aktualnie edytowanego przez nas testu, pytania które są aktualnie przypisane do niego, oraz formularz dodawania nowego pytania.</p>
+<p align="justify">W formularzu podajemy możliwe odpowiedzi (jeżeli chcemy, aby odpowiedzi było mniej, pola pozostawiamy puste - nie zostaną wtedy wyświetlone).  </p>
+<p align="justify">Po dodaniu wszystkich pytań które chcieli byśmy zawrzeć w teście, musimy go jeszcze ustawić jako ten aktywny w systemie.</p>
+</ul>
+<br>
+<br clear="all">
+<p align="justify">3. Wypełniamy test </p>
+<ul>
+<p align="justify">Gotowe. Teraz możemy przystąpić do wypełniania testu. Udajemy się do <strong>Strony głównej</strong>. Tam dokonujemy ew. wylogowania i wybieramy tryb, w jakim chcemy wypełnić test (gość, użytkownik).</p>
+<p align="justify"><table align="left" border="0" class=modul style="border: 0.3mm solid #376BD9; margin-right: 25px; margin-bottom: 10px">
+  <tr>
+    <td class=tabcaption>Zrzut 3.1 - Test</td>
+  </tr>
+  <tr>
+    <td><a href="screens/test.jpg"><img src="screens/test_small.jpg" border="0"></a></td>
+  </tr>
+</table></p>
+<p align="justify">Jak widzimy na  obrazku, nie wszystkie pytania są jednego koloru. Dzieje się tak dlatego, iż zaznaczyliśmy opcję &quot;<strong>aktywuj system zapobiegający ściąganiu</strong>&quot;. Zabezpieczenie to ma za zadanie utrudnić osobie np. siedzącej przy komputerze obok &quot;ściągnięcie&quot; zaznaczonych przez nas odpowiedzi.</p>
+<p align="justify">W razie gdybyśmy nie zaznaczyli wszystkich odpowiedzi na wszystkie pytania, przed wysłaniem testu zostaniemy o tym powiadomieni. </p>
+<p align="justify">Jeżeli test miał mieć ograniczenie czasowe, powinno być widoczne pole, odliczający czas, który poświęciliśmy już na pisanie testu. Minutę przed końcem czasu, zostaniemy powiadomieni. Po wybranym czasie skrypt wysyła się automatycznie.</p>
+<p align="justify">Po wypełnieniu wszystkich pytań możemy zakończyć test. W tym celu klikamy na przycisk <strong>Zakończ pisanie testu</strong>. Zostaniemy przeniesieni do strony z wynikami.</p>
+</ul>
+<br>
+<br clear="all">
+<p align="justify">4. Wyniki testu</p>
+<ul>
+<p align="justify">Plansza wyników podaje tytuł wypełnianego testu, czas jego wypełniania, ilość zdobytych przez użytkownika punktów, oraz poproponowaną przez system ocenę. Wartości procentowe ocen możemy dostosować np. do wewnątrz szkolnego systemu oceniania w panelu administracyjnym.</p>
+<p align="justify"><table align="left" border="0" class=modul style="border: 0.3mm solid #376BD9; margin-right: 25px; margin-bottom: 10px">
+  <tr>
+    <td class=tabcaption>Zrzut 4.1 - Pełny podgląd wyników</td>
+  </tr>
+  <tr>
+    <td><a href="screens/results.jpg"><img src="screens/results_small.jpg" border="0"></a></td>
+  </tr>
+</table>Wyniki zostają zapisane na serwerze. Administrator w każdej chwili może je podejrzeć. Ma dodatkowo opcję szczegółowego ich podglądu - odpowiedzi udzielane przez użytkownika w kolejnych pytaniach. </p>
+<p align="justify">Ponowna możliwość wypełniania testu przez zalogowanego użytkownika jest blokowana. </p>
+</ul>
+<br clear="all">
+<p align="justify">&nbsp;</p>
+
+<p align="justify"><a name="p4"></a><strong><font size=3>4. Pozostałe właściwości i funkcje systemu</font></strong></p>
+<p align="justify">Właściwości systemu:</p>
+<p align="justify"><ul>
+<li>Skrypt jest zabezpieczony (jeżęli chodzi o czas wypełnianie testu) przed odświeżaniem okienka przeglądarki - dot. tylko konta użytkownika - w razie odświeżenia strony, czas liczony jest od miejsca, w którym skrypt je zakończył </li>
+<li>Wyniki testów (jeżeli wcześniej utworzyliśmy w systemie klasy i konta użytkowników) są sortowane wg. klas, tak że nauczyciel może bezpośrednio otworzyć formularz z wynikami i przepisać oceny do dziennika</li>
+<li>Każdorazowo odpowiedzi do pytania są wyświetlane w losowej kolejności, aby utrudnić ściągnanie</li>
+<li>Pytania w teście również można wyświetlać w losowej kolejności   </li>
+</ul>
+</p>
+<p align="justify">Skrypt posiada również wiele opcji dodatkowych:</p>
+<p align="justify"><strong>Drukowanie testów </strong></p>
+<blockquote>
+  <p align="justify">Gotowe, sporządzone testy, nauczyciel może wydrukować i rozdać klasie do wypełnienia tradycyjną metodą (tzn. długopisem). </p>
+  </blockquote>
+<p align="justify"><strong>Testy dla przyjaciół </strong></p>
+<table border="0" align="right" class=modul style="border: 0.3mm solid #376BD9; margin-left: 15px">
+  <tr>
+    <td class=tabcaption>Zrzut - plik index2.php</td>
+  </tr>
+  <tr>
+    <td><a href="screens/index2.jpg"><img src="screens/index2_small.jpg" border="0"></a></td>
+  </tr>
+</table>
+<blockquote>
+  <p align="justify">Uruchamiając plik<strong> index2.php</strong> zamiast index.php z katalogu głównego skryptu możesz przeprowadzać testy np. wśród przyjaciół. Logują się oni wtedy zawsze jako gość, podając tylko swoje imię i nazwisko.</p>
+  <p align="justify">Możesz zadać im np. śmieszne pytania dotyczące Twojej osoby, lub ile pamiętają z ostatniej imprezy.</p>
+</blockquote>
+<p align="justify">&nbsp;</p>
+<p align="justify"><a name="p5"></a><strong><font size=3>5. Licencja</font></strong></p>
+<ul>
+<p align="justify">Skrypt jest własnością intelektualną Mariusza Żurawka.</p>
+<p align="justify">Może być używany wyłącznie przez osoby, które go zakupiły u autora - autor jest wyłączym jego dystrybutorem.</p>
+<p align="justify">
+    Licencja zezwala jedynie na użytkowanie skryptu, nie na jego dalszą sprzedaż. </p>
+<p align="justify">
+    Skrypt może być modyfikowany przez osoby, które go zakupiły, jednak wyłącznie do własnych celów. Nie może być rozpowszechniany w całości jak również w części.</p>
+<p align="justify">
+    Autor oświadcza, iż dołożył wszelkich starań, aby skrypt działał prawidłowo, jednak nie udziela gwarancji na jego użytkowanie. </p>
+	</ul>
+<p align="justify">&nbsp;</p>
+<p align="justify"><a name="p6"></a><strong><font size=3>6. W razie problemów</font></strong></p>
+	
+	<ul>
+	<p>W razie problemów z użytkowanie skryptu, proszę o kontakt: <a href="mailto:admin@admin">admin@admin</a> . </p>
+	<p>Dostępne jest też forum: <a href="http://www.intol.info/forum/index.php?showforum=24" target="_blank">www.intol.info/forum/index.php?showforum=24</a> . </p>
+	<p>&nbsp;</p>
+	</ul>
+	
+	
+	</td>
+
+  </tr>
+</table>
+</body>
+</html>
